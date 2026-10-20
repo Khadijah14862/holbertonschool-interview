@@ -26,7 +26,7 @@ def print_stats(total_size, counts):
 
 
 def main():
-    """Read log entries and display cumulative statistics."""
+    """Process log lines and print cumulative statistics."""
     total_size = 0
     counts = {code: 0 for code in VALID_CODES}
     line_count = 0
@@ -51,6 +51,9 @@ def main():
                 print_stats(total_size, counts)
 
     except KeyboardInterrupt:
+        pass
+
+    finally:
         print_stats(total_size, counts)
 
 
